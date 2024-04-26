@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,9 +8,9 @@
 
     <title>Document</title>
 </head>
-<body>
+<body> -->
     
-
+<?php ob_start(); $title = "ajoute d'intervenant";?>
 <h2 class="text-center">Ajouter intervernant</h2>
 
 <form action="" method="post">
@@ -36,5 +36,8 @@
     <input type="submit" name="ajouInter" class="btn btn-primary">
 </form>
 
-</body>
-</html>
+<?php
+// $content = ob_get_clean();
+//     include "Views/template.php";?>
+<!-- </body>
+</html> -->

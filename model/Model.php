@@ -21,8 +21,8 @@ abstract class Model {
     public function getAll($tableau){
         $sql="SELECT * FROM ". $tableau;
 
-        return $this->excecuteReq($query);
-        
+        return $this->excecuteReq($sql);
+
     }
     public function getConsultation($tab){
         $sql="SELECT * FROM ".$tab;

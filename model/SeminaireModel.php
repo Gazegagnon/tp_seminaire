@@ -36,7 +36,7 @@ class SeminaireModel extends Model{
         $tab=[];
         while($resultat=$this->excecuteReq($sql)->fetch()){
             extract($resultat);
-            $tab=new Seminaire($Id_seminaire, $titre, $resume, $lieu, $date_intervention, $date_update, $id_int);
+            $tab[]=new Seminaire($Id_seminaire, $titre, $resume, $lieu, $date_intervention, $date_update, $id);
             // $tab=new Intervenant($resultat["id_"],$resultat["nom"],$resultat["prenom"],$resultat["affectation"],$resultat["url_de_la_page_web"]);
         }
         return $tab;

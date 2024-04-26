@@ -1,6 +1,7 @@
 <?php
 
 class Seminaire{
+    private $id_seminaire; // int
     private $identifiantIntervenant; // int
     private $titreIntervention; // string
     private $resumeIntervention; // string

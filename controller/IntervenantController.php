@@ -7,8 +7,8 @@ class IntervenantController extends Controller{
             switch($action){
                 case "consultation":
                     $intervenants=$interModel->consulter();
-                    var_dump( $intervenants);
-                    $this->render("intervernant/index",[
+                    // var_dump( $intervenants);
+                    $this->render("intervenant/index",[
                         "intervenants"=>$intervenants
                     ]);
                     break;
@@ -19,14 +19,20 @@ class IntervenantController extends Controller{
                         $inter=new Intervenant(0, $nom,$prenom,$affectation,$url);
                         $interModel->create($inter);
 
-                        header("Location: ?action=.");
+                        header("Location: ?action=consultation");
                         exit;
                     }
-                    $this->render("intervernant/new");
+                    $this->render("intervenant/new");
                     break;
             }
 
+        }else{
+            $intervenants=$interModel->consulter();
+                    var_dump( $intervenants);
+                    $this->render("intervenant/index",[
+                        "intervenants"=>$intervenants]);
         }
+
     }
 
 }

@@ -5,7 +5,7 @@ include "classes/Seminaire.php";
 include "model/Model.php";
 include "model/IntervenantModel.php";
 include "model/SeminaireModel.php";
-// include "controller/Controller.php";
+include "controller/Controller.php";
 include "controller/IntervenantController.php";
 
 $interController = new IntervenantController();

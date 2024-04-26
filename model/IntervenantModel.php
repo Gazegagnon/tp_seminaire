@@ -6,7 +6,7 @@ class IntervernantModel extends Model{
             "nom"=>$inter->getNom(),
             "prenom"=>$inter->getPrenom(),
             "affectation"=>$inter->getAffectation(),
-            "url"=>$inter->getUrl()
+            "url"=>$inter->getUrlPageWeb()
         ]);
     }
     public function delete($id){
@@ -30,7 +30,7 @@ class IntervernantModel extends Model{
         $tab=[];
         while($resultat=$stmt->fetch()){
             extract($resultat);
-            $tab=new Intervenant($id_, $nom, $prenom, $affectation, $url_de_la_page_web);
+            $tab[]=new Intervenant($Id, $nom, $prenom, $affectation, $url);
             // $tab=new Intervenant($resultat["id_"],$resultat["nom"],$resultat["prenom"],$resultat["affectation"],$resultat["url_de_la_page_web"]);
         }
         return $tab;
